@@ -19,8 +19,7 @@
 }
 
 .todo-app {
-  width: 100%;
-  max-width: 540px;
+  min-width: 70vw;
   background: transparent;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
     rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
@@ -110,11 +109,10 @@
   list-style: none;
   font-size: 20px;
   padding: 12px 8px 12px 50px;
-  user-select: none;
   cursor: pointer;
   color: rgb(255, 255, 255);
   position: relative;
-  word-wrap: break-word;
+
 
 
   &::before {
@@ -151,7 +149,6 @@
   -webkit-transition: 0.4s;
   height: 35px;
   width: 35px;
-  padding-left: 28px;
   text-align: center;
   -moz-transition: 0.4s;
   -ms-transition: 0.4s;
