@@ -63,7 +63,6 @@
   margin-bottom: 2rem;
 
   & input {
-    flex: 1;
     border: none;
     outline: none;
     background: transparent;
@@ -113,9 +112,10 @@
   padding: 12px 8px 12px 50px;
   user-select: none;
   cursor: pointer;
-  font-weight: bold;
   color: rgb(255, 255, 255);
   position: relative;
+  word-wrap: break-word;
+
 
   &::before {
     content: "";
@@ -145,12 +145,13 @@
 
 #list-container li span {
   position: absolute;
-  right: 10px;
+  right: 0;
   font-size: 20px;
   transition: 0.4s;
   -webkit-transition: 0.4s;
   height: 35px;
   width: 35px;
+  padding-left: 28px;
   text-align: center;
   -moz-transition: 0.4s;
   -ms-transition: 0.4s;
@@ -186,5 +187,11 @@
   .search-row .btn {
     font-size: 13px;
     padding: 10px 35px;
+  }
+}
+
+@media screen and (width < 400px) {
+  .search-row {
+    flex-direction: column;
   }
 }
