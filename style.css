@@ -20,7 +20,7 @@
 
 .todo-app {
   width: 100%;
-  max-width: 540px;
+  max-width: 880px;
   margin: 4% 3%;
   background: transparent;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
@@ -143,7 +143,7 @@
   }
 }
 
-#list-container li span {
+#list-container li .span1 {
   position: absolute;
   right: 0;
   font-size: 20px;
@@ -161,6 +161,9 @@
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   &:hover {
     scale: 1.1;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -172,13 +175,23 @@
     background: #000;
   }
 }
+
+#list-container li .span {
+  position: absolute;
+  right: 60px;
+}
 .footer h3 {
   font-size: 4vw;
   text-align: center;
   font-weight: bold;
   color: wheat;
 }
-
+@media screen and (width > 768px) {
+  #list-container li {
+    display: flex;
+    align-items: center;
+  }
+}
 @media screen and (width < 568px) {
   .search-row input {
     font-size: 15px;
@@ -186,6 +199,9 @@
   .search-row .btn {
     font-size: 13px;
     padding: 10px 35px;
+  }
+  .span {
+    display: none;
   }
 }
 

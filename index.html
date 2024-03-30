@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo App</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://is1-ssl.mzstatic.com/image/thumb/Purple128/v4/95/49/eb/9549eb3a-c68b-f66a-a61b-03ec5f52e83f/source/512x512bb.jpg"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <div class="container">
@@ -36,11 +41,21 @@
           alert("You must write something!");
         } else {
           let li = document.createElement("li");
+          let spanDate = document.createElement("span");
+          let dateOfTodo = new Date();
+          dateOfTodo = dateOfTodo.toDateString(); /* 
+          dateOfTodo = dateOfTodo.toLocaleTimeString(); */
+          console.log(dateOfTodo);
           li.innerText = inputBox.value;
+          spanDate.innerHTML = dateOfTodo;
+          spanDate.classList.add("span");
+
           listContainer.append(li);
 
           let iconX = document.createElement("span");
+          iconX.classList.add("span1");
           iconX.innerHTML = "\u2718";
+          li.append(spanDate);
           li.append(iconX);
         }
         inputBox.value = "";
